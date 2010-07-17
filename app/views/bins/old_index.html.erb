@@ -1,0 +1,18 @@
+<h1>Goal.com Italy Latest news</h1>
+<div>
+<% for news_item in @goal_italia_list %>
+<div>
+<%= link_to news_item.news , "http://www.goal.com#{news_item.link}" %>
+</div>
+<% end %>
+</div>
+
+<h1>Goal.com Spain Latest news</h1>
+<div>
+<% for news_item in @goal_espana_list %>
+<div>
+<%= link_to news_item.news , "http://www.goal.com#{news_item.link}" %>
+</div>
+<% end %>
+</div>
+

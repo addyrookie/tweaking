@@ -1,0 +1,19 @@
+<h1>Goal.com Spain Latest news</h1>
+
+<% form_tag spain_path , :method => 'get' do %>
+  <p>
+    <%= text_field_tag  :search %>
+    <%= submit_tag "Search" , :name => nil %>
+  </p>
+<% end %>
+
+<%= will_paginate @latest_news %>
+<% for news_item in @latest_news %>
+<div>
+<%= link_to news_item.news , "http://www.goal.com#{news_item.link}"%>
+
+</div>
+<% end %>
+<%= will_paginate @latest_news %>
+
+

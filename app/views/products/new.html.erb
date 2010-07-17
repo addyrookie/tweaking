@@ -1,0 +1,21 @@
+<% form_for @product , :html => {:multipart => true } do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+  
+  <p>
+    <b>Price</b><br />
+    <%= f.text_field :price %>
+  </p>
+  
+  <p>
+    <b>Upload Image</b> <br />
+    <%= f.file_field :image_file %> <br />
+     or URL: <%= f.text_field :image_file_url %>
+  </p>
+  
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+ <% end %>
